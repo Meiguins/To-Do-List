@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="formularioTarefa">
+            <h2>Adicionar Tarefa</h2>
+            <label for="nomeTarefa">Nome:</label>
+            <input type="text" id="nomeTarefa" placeholder="Nome da tarefa" required><br>
+            <label for="descricaoTarefa">Descrição:</label>
+            <input type="text" id="descricaoTarefa" placeholder="Descrição da tarefa" required><br>
+            <label for="realizadoTarefa">Realizado:</label>
+            <input type="checkbox" id="realizadoTarefa"><br>
+            <label for="prioridadeTarefa">Prioridade:</label>
+            <select id="prioridadeTarefa">
+                <option value="1">Baixa</option>
+                <option value="2">Média</option>
+                <option value="3">Alta</option>
+            </select><br>
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+        
+        <ul id="listaTarefas"></ul>
+        
+        <div id="formularioAtualizacaoTarefa">
+            <h2>Atualizar Tarefa</h2>
+            <input type="hidden" id="idTarefaAtualizacao">
+            <label for="nomeTarefaAtualizacao">Nome:</label>
+            <input type="text" id="nomeTarefaAtualizacao" required><br>
+            <label for="descricaoTarefaAtualizacao">Descrição:</label>
+            <input type="text" id="descricaoTarefaAtualizacao" required><br>
+            <label for="realizadoTarefaAtualizacao">Realizado:</label>
+            <input type="checkbox" id="realizadoTarefaAtualizacao"><br>
+            <label for="prioridadeTarefaAtualizacao">Prioridade:</label>
+            <select id="prioridadeTarefaAtualizacao">
+                <option value="1">Baixa</option>
+                <option value="2">Média</option>
+                <option value="3">Alta</option>
+            </select><br>
+            <button onclick="atualizarTarefa()">Salvar</button>
+            <button onclick="esconderMenuAtualizacao()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
